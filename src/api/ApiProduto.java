@@ -74,7 +74,7 @@ public class ApiProduto {
                     Produto novoProduto = gson.fromJson(request.body(), Produto.class);
                     dao.inserir(novoProduto);
 
-                    response.status(201); // Created
+                    response.status(201); 
                     return gson.toJson(novoProduto);
                 } catch (Exception e) {
                     response.status(500);
